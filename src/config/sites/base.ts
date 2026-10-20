@@ -23,6 +23,10 @@ export const base = {
 
   // Main accent colour. Try #FF5A36 (orange), #3DDCFF (cyan) or #FFC400 (amber).
   accent: "#D4FF3F",
+  // Text colour on accent fills (buttons, banner). Leave as is for light accents.
+  onAccent: "#0f1110",
+  // Accent used for text on the dark background. Empty = same as accent.
+  accentText: "",
 
   // Shows a strip at the top saying this is a sample. Set to false for a final site.
   showSampleBanner: true,

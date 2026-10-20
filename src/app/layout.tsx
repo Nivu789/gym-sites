@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body style={{ "--accent": siteConfig.accent } as CSSProperties}>{children}</body>
+      <body style={{
+          "--accent": siteConfig.accent,
+          "--on-accent": siteConfig.onAccent,
+          "--accent-text": siteConfig.accentText || siteConfig.accent,
+        } as CSSProperties}>{children}</body>
     </html>
   );
 }

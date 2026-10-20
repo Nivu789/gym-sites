@@ -6,6 +6,7 @@
   --text: #f3f1ea;
   --muted: #a9ada4;
   --accent: #d4ff3f;
+  --accent-text: #d4ff3f;
   --on-accent: #0f1110;
   --display: "Barlow Condensed", "Arial Narrow", sans-serif;
   --body: "Barlow", system-ui, sans-serif;
@@ -48,7 +49,7 @@ a {
   font-size: 14px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .h2 {
@@ -70,7 +71,7 @@ a {
 }
 
 .accent {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* Buttons */
@@ -281,7 +282,7 @@ a {
   font-family: var(--display);
   font-weight: 700;
   font-size: 22px;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .card__title {
@@ -339,7 +340,7 @@ a {
 
 .table tbody th {
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .table td.is-closed {
