@@ -1,6 +1,6 @@
-import { siteConfig } from "@/config/site";
+import type { SiteConfig } from "@/config/site";
 
-export default function Timetable() {
+export default function Timetable({ siteConfig }: { siteConfig: SiteConfig }) {
   const { timetable } = siteConfig;
   return (
     <section className="section section--alt" id="timetable">

@@ -1,6 +1,6 @@
-import { siteConfig } from "@/config/site";
+import type { SiteConfig } from "@/config/site";
 
-export default function Visit() {
+export default function Visit({ siteConfig }: { siteConfig: SiteConfig }) {
   const { address, hours, phoneDisplay, phoneHref, whatsapp, mapEmbedUrl } = siteConfig;
   return (
     <section className="section" id="visit">

@@ -1,4 +1,4 @@
-import { siteConfig } from "@/config/site";
+import type { SiteConfig } from "@/config/site";
 
 const links = [
   ["Programs", "#programs"],
@@ -8,7 +8,7 @@ const links = [
   ["Visit", "#visit"],
 ] as const;
 
-export default function Header() {
+export default function Header({ siteConfig }: { siteConfig: SiteConfig }) {
   const { before, highlight, after } = siteConfig.brand;
   return (
     <header className="header">

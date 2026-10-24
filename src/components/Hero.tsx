@@ -1,6 +1,6 @@
-import { siteConfig } from "@/config/site";
+import type { SiteConfig } from "@/config/site";
 
-export default function Hero() {
+export default function Hero({ siteConfig }: { siteConfig: SiteConfig }) {
   const { hero } = siteConfig;
   return (
     <section className="hero" id="top">

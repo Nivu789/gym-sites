@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { siteConfig, siteName } from "@/config/site";
+import { siteNameOf, type SiteConfig } from "@/config/site";
 
-export default function TrialForm() {
+export default function TrialForm({ siteConfig }: { siteConfig: SiteConfig }) {
+  const siteName = siteNameOf(siteConfig);
   const [error, setError] = useState("");
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {

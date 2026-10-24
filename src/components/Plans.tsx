@@ -1,6 +1,6 @@
-import { siteConfig } from "@/config/site";
+import type { SiteConfig } from "@/config/site";
 
-export default function Plans() {
+export default function Plans({ siteConfig }: { siteConfig: SiteConfig }) {
   return (
     <section className="section" id="plans">
       <div className="container">

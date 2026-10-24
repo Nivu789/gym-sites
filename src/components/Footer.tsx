@@ -1,6 +1,6 @@
-import { siteConfig } from "@/config/site";
+import type { SiteConfig } from "@/config/site";
 
-export default function Footer() {
+export default function Footer({ siteConfig }: { siteConfig: SiteConfig }) {
   const { before, highlight, after } = siteConfig.brand;
   return (
     <footer className="footer">

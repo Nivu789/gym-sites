@@ -1,6 +1,6 @@
-import { siteConfig } from "@/config/site";
+import type { SiteConfig } from "@/config/site";
 
-export default function Trainers() {
+export default function Trainers({ siteConfig }: { siteConfig: SiteConfig }) {
   return (
     <section className="section section--alt" id="trainers">
       <div className="container">

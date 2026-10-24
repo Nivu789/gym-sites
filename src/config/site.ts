@@ -1,19 +1,14 @@
-// Selects which gym's config to build. Set NEXT_PUBLIC_SITE to one of:
-// 2bfit | bodyshockz | befit | rawfitness | rawstrength   (default: the generic Northfield sample)
+// Each client gets its own route (see src/app/<client>/page.tsx) and its own config file
+// in ./sites, so their sites never share content. To add a client: copy a sites/*.ts file,
+// add it to `sites` below and create src/app/<client>/page.tsx.
 import { base } from "./sites/base";
-import { site as twoBfit } from "./sites/2bfit";
 import { site as bodyShockz } from "./sites/bodyshockz";
-import { site as beFit } from "./sites/befit";
-import { site as rawFitness } from "./sites/rawfitness";
 import { site as rawStrength } from "./sites/rawstrength";
 
 export type { Program, Plan, Trainer, TimetableRow } from "./sites/base";
+export type SiteConfig = typeof base;
 
-const sites = { "2bfit": twoBfit, bodyshockz: bodyShockz, befit: beFit, rawfitness: rawFitness, rawstrength: rawStrength };
+export const sites = { bodyshockz: bodyShockz, rawstrength: rawStrength };
 
-export const siteConfig: typeof base =
-  sites[process.env.NEXT_PUBLIC_SITE as keyof typeof sites] ?? base;
-
-export const siteName = [siteConfig.brand.before, siteConfig.brand.highlight, siteConfig.brand.after]
-  .filter(Boolean)
-  .join(" ");
+export const siteNameOf = (c: SiteConfig) =>
+  [c.brand.before, c.brand.highlight, c.brand.after].filter(Boolean).join(" ");
